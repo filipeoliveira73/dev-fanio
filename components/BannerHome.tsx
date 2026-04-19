@@ -74,7 +74,7 @@ export default function BannerHome() {
       <Content>
         <LogoWrapper>
           <Image
-            src="/images/logo-transparente.jpg"
+            src="/images/logo-preview.png"
             alt="Logo DevFanio"
             fill
             style={{ objectFit: "cover", borderRadius: "50%" }}

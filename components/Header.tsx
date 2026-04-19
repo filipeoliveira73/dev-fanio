@@ -10,6 +10,19 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
 `;
 
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+const LogoImage = styled.img`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  object-fit: cover;
+`;
+
 const Logo = styled.span`
   font-size: 1.25rem;
   font-weight: 700;
@@ -34,8 +47,11 @@ const Nav = styled.nav`
 export default function Header() {
   return (
     <HeaderWrapper>
-      <Link href="/">
-        <Logo>DevFanio</Logo>
+      <Link href="/" id="header">
+        <LogoWrapper>
+          <LogoImage src="/images/logo-preview.png" alt="DevFanio logo" />
+          <Logo>DevFanio</Logo>
+        </LogoWrapper>
       </Link>
       <Nav>
         <Link href="/">Posts</Link>
