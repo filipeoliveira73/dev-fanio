@@ -1,0 +1,25 @@
+{
+  "title": "Bem-vindo ao Meu Blog",
+  "date": "2026-04-06T00:00:00.000Z",
+  "description": "Primeiro post do blog — apresentando a stack escolhida: Next.js 14, Styled Components e Contentlayer.",
+  "tags": [
+    "nextjs",
+    "typescript",
+    "styled-components"
+  ],
+  "body": {
+    "raw": "\n## Olá, mundo!\n\nEste é o primeiro post do blog construído com **Next.js 14**, **Styled Components** e **Contentlayer**.\n\n### Por que essa stack?\n\n- **Next.js 14 (App Router):** SSG nativo e Server Components reduzem o bundle JS ao mínimo.\n- **Styled Components 6:** CSS-in-JS com escopo por componente e suporte a SSR via registry.\n- **Contentlayer:** Transforma arquivos Markdown em dados JSON tipados, garantindo que campos obrigatórios de SEO estejam sempre presentes.\n\n### O que esperar\n\nNos próximos posts, vou cobrir:\n\n1. Como configurar o SSR Registry do Styled Components no App Router\n2. Geração estática de páginas com `generateStaticParams`\n3. Schema Markup (JSON-LD) para melhorar o ranqueamento no Google\n\nFique ligado!\n",
+    "html": "<h2>Olá, mundo!</h2>\n<p>Este é o primeiro post do blog construído com <strong>Next.js 14</strong>, <strong>Styled Components</strong> e <strong>Contentlayer</strong>.</p>\n<h3>Por que essa stack?</h3>\n<ul>\n<li><strong>Next.js 14 (App Router):</strong> SSG nativo e Server Components reduzem o bundle JS ao mínimo.</li>\n<li><strong>Styled Components 6:</strong> CSS-in-JS com escopo por componente e suporte a SSR via registry.</li>\n<li><strong>Contentlayer:</strong> Transforma arquivos Markdown em dados JSON tipados, garantindo que campos obrigatórios de SEO estejam sempre presentes.</li>\n</ul>\n<h3>O que esperar</h3>\n<p>Nos próximos posts, vou cobrir:</p>\n<ol>\n<li>Como configurar o SSR Registry do Styled Components no App Router</li>\n<li>Geração estática de páginas com <code>generateStaticParams</code></li>\n<li>Schema Markup (JSON-LD) para melhorar o ranqueamento no Google</li>\n</ol>\n<p>Fique ligado!</p>"
+  },
+  "_id": "hello-world.md",
+  "_raw": {
+    "sourceFilePath": "hello-world.md",
+    "sourceFileName": "hello-world.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "hello-world"
+  },
+  "type": "Post",
+  "slug": "hello-world",
+  "url": "/posts/hello-world"
+}

@@ -1,0 +1,64 @@
+{
+  "cacheItemsMap": {
+    "hello-world.md": {
+      "document": {
+        "title": "Bem-vindo ao Meu Blog",
+        "date": "2026-04-06T00:00:00.000Z",
+        "description": "Primeiro post do blog — apresentando a stack escolhida: Next.js 14, Styled Components e Contentlayer.",
+        "tags": [
+          "nextjs",
+          "typescript",
+          "styled-components"
+        ],
+        "body": {
+          "raw": "\n## Olá, mundo!\n\nEste é o primeiro post do blog construído com **Next.js 14**, **Styled Components** e **Contentlayer**.\n\n### Por que essa stack?\n\n- **Next.js 14 (App Router):** SSG nativo e Server Components reduzem o bundle JS ao mínimo.\n- **Styled Components 6:** CSS-in-JS com escopo por componente e suporte a SSR via registry.\n- **Contentlayer:** Transforma arquivos Markdown em dados JSON tipados, garantindo que campos obrigatórios de SEO estejam sempre presentes.\n\n### O que esperar\n\nNos próximos posts, vou cobrir:\n\n1. Como configurar o SSR Registry do Styled Components no App Router\n2. Geração estática de páginas com `generateStaticParams`\n3. Schema Markup (JSON-LD) para melhorar o ranqueamento no Google\n\nFique ligado!\n",
+          "html": "<h2>Olá, mundo!</h2>\n<p>Este é o primeiro post do blog construído com <strong>Next.js 14</strong>, <strong>Styled Components</strong> e <strong>Contentlayer</strong>.</p>\n<h3>Por que essa stack?</h3>\n<ul>\n<li><strong>Next.js 14 (App Router):</strong> SSG nativo e Server Components reduzem o bundle JS ao mínimo.</li>\n<li><strong>Styled Components 6:</strong> CSS-in-JS com escopo por componente e suporte a SSR via registry.</li>\n<li><strong>Contentlayer:</strong> Transforma arquivos Markdown em dados JSON tipados, garantindo que campos obrigatórios de SEO estejam sempre presentes.</li>\n</ul>\n<h3>O que esperar</h3>\n<p>Nos próximos posts, vou cobrir:</p>\n<ol>\n<li>Como configurar o SSR Registry do Styled Components no App Router</li>\n<li>Geração estática de páginas com <code>generateStaticParams</code></li>\n<li>Schema Markup (JSON-LD) para melhorar o ranqueamento no Google</li>\n</ol>\n<p>Fique ligado!</p>"
+        },
+        "_id": "hello-world.md",
+        "_raw": {
+          "sourceFilePath": "hello-world.md",
+          "sourceFileName": "hello-world.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "hello-world"
+        },
+        "type": "Post",
+        "slug": "hello-world",
+        "url": "/posts/hello-world"
+      },
+      "documentHash": "1775514794567",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "nextjs-app-router.md": {
+      "document": {
+        "title": "App Router do Next.js 14: tudo que você precisa saber",
+        "date": "2026-04-05T00:00:00.000Z",
+        "description": "Um guia prático sobre o App Router do Next.js 14: Server Components, layouts aninhados e geração estática com generateStaticParams.",
+        "tags": [
+          "nextjs",
+          "app-router",
+          "react"
+        ],
+        "body": {
+          "raw": "\n## O que mudou com o App Router?\n\nO App Router introduzido no Next.js 13 e estabilizado no Next.js 14 traz uma mudança fundamental na forma de pensar a arquitetura de aplicações React.\n\n### Server Components por padrão\n\nTodos os componentes dentro de `app/` são **Server Components** por padrão. Isso significa:\n\n- Zero JavaScript enviado ao cliente para componentes que não precisam de interatividade\n- Acesso direto a dados no servidor sem `useEffect` ou `fetch` no cliente\n- Melhor performance e menor bundle size\n\n### Layouts aninhados\n\nA pasta `app/` suporta layouts aninhados:\n\n```\napp/\n  layout.tsx        ← layout raiz (sempre renderizado)\n  page.tsx          ← home\n  posts/\n    layout.tsx      ← layout específico de posts (opcional)\n    [slug]/\n      page.tsx      ← página do post\n```\n\n### generateStaticParams\n\nPara rotas dinâmicas com SSG, use `generateStaticParams`:\n\n```ts\nexport function generateStaticParams() {\n  return allPosts.map((post) => ({ slug: post.slug }))\n}\n```\n\nO Next.js pré-renderiza todas as páginas em tempo de build — sem servidor em runtime.\n",
+          "html": "<h2>O que mudou com o App Router?</h2>\n<p>O App Router introduzido no Next.js 13 e estabilizado no Next.js 14 traz uma mudança fundamental na forma de pensar a arquitetura de aplicações React.</p>\n<h3>Server Components por padrão</h3>\n<p>Todos os componentes dentro de <code>app/</code> são <strong>Server Components</strong> por padrão. Isso significa:</p>\n<ul>\n<li>Zero JavaScript enviado ao cliente para componentes que não precisam de interatividade</li>\n<li>Acesso direto a dados no servidor sem <code>useEffect</code> ou <code>fetch</code> no cliente</li>\n<li>Melhor performance e menor bundle size</li>\n</ul>\n<h3>Layouts aninhados</h3>\n<p>A pasta <code>app/</code> suporta layouts aninhados:</p>\n<pre><code>app/\n  layout.tsx        ← layout raiz (sempre renderizado)\n  page.tsx          ← home\n  posts/\n    layout.tsx      ← layout específico de posts (opcional)\n    [slug]/\n      page.tsx      ← página do post\n</code></pre>\n<h3>generateStaticParams</h3>\n<p>Para rotas dinâmicas com SSG, use <code>generateStaticParams</code>:</p>\n<pre><code class=\"language-ts\">export function generateStaticParams() {\n  return allPosts.map((post) => ({ slug: post.slug }))\n}\n</code></pre>\n<p>O Next.js pré-renderiza todas as páginas em tempo de build — sem servidor em runtime.</p>"
+        },
+        "_id": "nextjs-app-router.md",
+        "_raw": {
+          "sourceFilePath": "nextjs-app-router.md",
+          "sourceFileName": "nextjs-app-router.md",
+          "sourceFileDir": ".",
+          "contentType": "markdown",
+          "flattenedPath": "nextjs-app-router"
+        },
+        "type": "Post",
+        "slug": "nextjs-app-router",
+        "url": "/posts/nextjs-app-router"
+      },
+      "documentHash": "1775514801579",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
+}
