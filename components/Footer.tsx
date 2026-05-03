@@ -13,7 +13,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <FooterWrapper>
-      <p>© {year} Meu Blog. Todos os direitos reservados.</p>
+      <p>© {year} Epifany. Todos os direitos reservados.</p>
     </FooterWrapper>
   )
 }

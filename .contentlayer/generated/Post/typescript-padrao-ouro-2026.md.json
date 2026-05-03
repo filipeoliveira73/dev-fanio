@@ -1,0 +1,27 @@
+{
+  "title": "Por que o TypeScript se Tornou o Padrão Ouro em 2026",
+  "date": "2026-05-02T00:00:00.000Z",
+  "description": "TypeScript domina o ecossistema JavaScript em 2026. Veja os motivos técnicos e culturais que consolidaram sua adoção como padrão da indústria.",
+  "tags": [
+    "typescript",
+    "javascript",
+    "boas práticas",
+    "ecossistema",
+    "carreira"
+  ],
+  "body": {
+    "raw": "\n## De opcional a obrigatório\n\nHá alguns anos, TypeScript era \"aquela coisa que times grandes usavam\". Em 2026, é difícil encontrar um projeto JavaScript relevante — front, back ou mobile — que **não** use TypeScript por padrão.\n\n### Os motivos técnicos\n\n**1. Feedback imediato no editor**\nErros de tipo aparecem antes de rodar qualquer teste. Em bases de código grandes, isso economiza horas de debugging.\n\n**2. Refatoração com segurança**\nRenomear uma função ou alterar a assinatura de um método propaga automaticamente para todos os usos — o compilador aponta o que quebrou.\n\n**3. Integração nativa com o ecossistema**\nNext.js, NestJS, Prisma, tRPC e praticamente todos os frameworks modernos são construídos *em* TypeScript e oferecem inferência de tipos out-of-the-box.\n\n**4. LLMs geram código melhor com TypeScript**\nFerramentas de IA como GitHub Copilot e Claude produzem sugestões mais precisas quando há tipos explícitos — o contexto disponível é maior.\n\n### O motivo cultural\n\nO mercado de trabalho consolidou TypeScript como **requisito mínimo**. Times que usam JavaScript puro carregam o ônus de justificar a escolha, não o contrário.\n\n### Quando JavaScript ainda faz sentido\n\n- Scripts utilitários de vida curta (automações, one-offs)\n- Prototipação exploratória antes de comprometer uma estrutura\n- Ambientes onde o overhead de compilação é proibitivo\n\n### Conclusão\n\nTypeScript não venceu por imposição — venceu porque **o custo de não usá-lo** ficou alto demais. Tipos são documentação viva, e em um cenário de equipes distribuídas e IA gerando código, essa documentação vale ouro.\n",
+    "html": "<h2>De opcional a obrigatório</h2>\n<p>Há alguns anos, TypeScript era \"aquela coisa que times grandes usavam\". Em 2026, é difícil encontrar um projeto JavaScript relevante — front, back ou mobile — que <strong>não</strong> use TypeScript por padrão.</p>\n<h3>Os motivos técnicos</h3>\n<p><strong>1. Feedback imediato no editor</strong>\nErros de tipo aparecem antes de rodar qualquer teste. Em bases de código grandes, isso economiza horas de debugging.</p>\n<p><strong>2. Refatoração com segurança</strong>\nRenomear uma função ou alterar a assinatura de um método propaga automaticamente para todos os usos — o compilador aponta o que quebrou.</p>\n<p><strong>3. Integração nativa com o ecossistema</strong>\nNext.js, NestJS, Prisma, tRPC e praticamente todos os frameworks modernos são construídos <em>em</em> TypeScript e oferecem inferência de tipos out-of-the-box.</p>\n<p><strong>4. LLMs geram código melhor com TypeScript</strong>\nFerramentas de IA como GitHub Copilot e Claude produzem sugestões mais precisas quando há tipos explícitos — o contexto disponível é maior.</p>\n<h3>O motivo cultural</h3>\n<p>O mercado de trabalho consolidou TypeScript como <strong>requisito mínimo</strong>. Times que usam JavaScript puro carregam o ônus de justificar a escolha, não o contrário.</p>\n<h3>Quando JavaScript ainda faz sentido</h3>\n<ul>\n<li>Scripts utilitários de vida curta (automações, one-offs)</li>\n<li>Prototipação exploratória antes de comprometer uma estrutura</li>\n<li>Ambientes onde o overhead de compilação é proibitivo</li>\n</ul>\n<h3>Conclusão</h3>\n<p>TypeScript não venceu por imposição — venceu porque <strong>o custo de não usá-lo</strong> ficou alto demais. Tipos são documentação viva, e em um cenário de equipes distribuídas e IA gerando código, essa documentação vale ouro.</p>"
+  },
+  "_id": "typescript-padrao-ouro-2026.md",
+  "_raw": {
+    "sourceFilePath": "typescript-padrao-ouro-2026.md",
+    "sourceFileName": "typescript-padrao-ouro-2026.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "typescript-padrao-ouro-2026"
+  },
+  "type": "Post",
+  "slug": "typescript-padrao-ouro-2026",
+  "url": "/posts/typescript-padrao-ouro-2026"
+}
