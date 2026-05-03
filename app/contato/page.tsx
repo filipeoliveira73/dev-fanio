@@ -71,7 +71,7 @@ export default function ContatoPage() {
       <PageTitle>Contato</PageTitle>
       <Lead>
         Tem uma sugestão de pauta, encontrou um erro em algum artigo ou quer
-        propor uma parceria? Fique à vontade para entrar em contato.
+        propor uma parceria? Fique à vontade para entrar em contato conosco.
       </Lead>
 
       <ContactList>

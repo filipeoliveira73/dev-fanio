@@ -83,7 +83,7 @@ export default function BannerHome() {
         </LogoWrapper>
         <TextGroup>
           <Title>DevFanio</Title>
-          <Subtitle>Seu blog de tecnologia</Subtitle>
+          <Subtitle>Um blog de tecnologia</Subtitle>
         </TextGroup>
       </Content>
     </BannerWrapper>
