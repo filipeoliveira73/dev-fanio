@@ -1,5 +1,31 @@
 [
   {
+    "title": "O Surgimento dos Engenheiros de Software AI-First",
+    "date": "2026-05-02T00:00:00.000Z",
+    "description": "Como a geração de engenheiros AI-First está redefinindo o desenvolvimento de software, usando IA como ferramenta central no ciclo de criação.",
+    "tags": [
+      "inteligência artificial",
+      "carreira",
+      "engenharia de software",
+      "llm"
+    ],
+    "body": {
+      "raw": "\n## O que é um engenheiro AI-First?\n\nA expressão *AI-First* não significa apenas usar ferramentas de IA — significa **projetar o fluxo de trabalho em torno delas**. Esses engenheiros delegam tarefas repetitivas para modelos de linguagem (LLMs), revisam o output criticamente e focam energia em decisões que exigem julgamento humano.\n\n### Como esse perfil se diferencia\n\n| Engenheiro tradicional | Engenheiro AI-First |\n|---|---|\n| Escreve boilerplate manualmente | Gera e revisa boilerplate com IA |\n| Busca no Stack Overflow | Conversa com o modelo + valida na docs |\n| Foca em sintaxe | Foca em arquitetura e trade-offs |\n\n### Habilidades que passam a importar mais\n\n- **Prompt engineering** estruturado para obter código de qualidade\n- **Pensamento crítico** para identificar alucinações e erros sutis\n- **Conhecimento de sistemas** para orquestrar agentes e pipelines de IA\n- **Comunicação clara** — bons engenheiros AI-First escrevem specs detalhadas\n\n### O risco do excesso de confiança\n\nFerramentas como GitHub Copilot e Claude Code aceleram muito, mas código gerado sem revisão acumula dívida técnica rapidamente. O diferencial do profissional AI-First está justamente em **saber quando confiar e quando questionar** o output.\n\n### Conclusão\n\nA mudança não é sobre substituição, mas sobre **alavancagem**. Quem aprender a colaborar com IA de forma crítica e estruturada entregará muito mais — e com mais qualidade — do que quem ignorar essas ferramentas.\n",
+      "html": "<h2>O que é um engenheiro AI-First?</h2>\n<p>A expressão <em>AI-First</em> não significa apenas usar ferramentas de IA — significa <strong>projetar o fluxo de trabalho em torno delas</strong>. Esses engenheiros delegam tarefas repetitivas para modelos de linguagem (LLMs), revisam o output criticamente e focam energia em decisões que exigem julgamento humano.</p>\n<h3>Como esse perfil se diferencia</h3>\n<p>| Engenheiro tradicional | Engenheiro AI-First |\n|---|---|\n| Escreve boilerplate manualmente | Gera e revisa boilerplate com IA |\n| Busca no Stack Overflow | Conversa com o modelo + valida na docs |\n| Foca em sintaxe | Foca em arquitetura e trade-offs |</p>\n<h3>Habilidades que passam a importar mais</h3>\n<ul>\n<li><strong>Prompt engineering</strong> estruturado para obter código de qualidade</li>\n<li><strong>Pensamento crítico</strong> para identificar alucinações e erros sutis</li>\n<li><strong>Conhecimento de sistemas</strong> para orquestrar agentes e pipelines de IA</li>\n<li><strong>Comunicação clara</strong> — bons engenheiros AI-First escrevem specs detalhadas</li>\n</ul>\n<h3>O risco do excesso de confiança</h3>\n<p>Ferramentas como GitHub Copilot e Claude Code aceleram muito, mas código gerado sem revisão acumula dívida técnica rapidamente. O diferencial do profissional AI-First está justamente em <strong>saber quando confiar e quando questionar</strong> o output.</p>\n<h3>Conclusão</h3>\n<p>A mudança não é sobre substituição, mas sobre <strong>alavancagem</strong>. Quem aprender a colaborar com IA de forma crítica e estruturada entregará muito mais — e com mais qualidade — do que quem ignorar essas ferramentas.</p>"
+    },
+    "_id": "engenheiros-ai-first.md",
+    "_raw": {
+      "sourceFilePath": "engenheiros-ai-first.md",
+      "sourceFileName": "engenheiros-ai-first.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "engenheiros-ai-first"
+    },
+    "type": "Post",
+    "slug": "engenheiros-ai-first",
+    "url": "/posts/engenheiros-ai-first"
+  },
+  {
     "title": "Bem-vindo ao Meu Blog",
     "date": "2026-04-06T00:00:00.000Z",
     "description": "Primeiro post do blog — apresentando a stack escolhida: Next.js 14, Styled Components e Contentlayer.",
@@ -48,5 +74,86 @@
     "type": "Post",
     "slug": "nextjs-app-router",
     "url": "/posts/nextjs-app-router"
+  },
+  {
+    "title": "Otimização de Performance em Apps Mobile com Expo e React Native",
+    "date": "2026-05-02T00:00:00.000Z",
+    "description": "Guia prático de otimização de performance para apps React Native com Expo: renderização, imagens, listas e New Architecture.",
+    "tags": [
+      "react native",
+      "expo",
+      "performance",
+      "mobile",
+      "javascript"
+    ],
+    "body": {
+      "raw": "\n## Por que performance mobile é diferente\n\nDispositivos móveis têm CPU, memória e bateria limitados. Um app lento não é só uma má experiência — ele é desinstalado. Otimizar React Native exige entender onde os gargalos realmente estão.\n\n### 1. Evite re-renders desnecessários\n\nO principal vilão de performance em React é renderizar componentes sem necessidade.\n\n```tsx\n// Ruim: cria nova referência a cada render\n<FlatList renderItem={({ item }) => <Card item={item} />} />\n\n// Bom: componente estável com memo\nconst CardItem = memo(({ item }: { item: Item }) => <Card item={item} />);\n<FlatList renderItem={({ item }) => <CardItem item={item} />} />\n```\n\nUse `useMemo` e `useCallback` apenas onde há custo real de computação — não indiscriminadamente.\n\n### 2. Listas com FlatList e FlashList\n\nPara listas longas, prefira **FlashList** (Shopify) ao `FlatList` nativo — ela recicla células de forma mais eficiente e reduz o tempo de primeiro render em até 10x.\n\n```bash\nnpx expo install @shopify/flash-list\n```\n\n### 3. Imagens otimizadas\n\n- Use `expo-image` no lugar de `<Image />` do React Native: suporta cache agressivo, blurhash e formatos modernos (WebP, AVIF)\n- Sempre defina `width` e `height` explícitos para evitar layout shift\n\n### 4. New Architecture (JSI + Fabric)\n\nO Expo SDK 50+ habilita a **New Architecture** por padrão. Com ela, a comunicação JS↔Native deixa de passar pela bridge assíncrona e passa a usar JSI (JavaScript Interface), eliminando serialização e reduzindo latência em operações intensivas.\n\nAtive no `app.json`:\n\n```json\n{\n  \"expo\": {\n    \"newArchEnabled\": true\n  }\n}\n```\n\n### 5. Profiling com Flashlight\n\nO **Flashlight** (anteriormente PerfDog open-source) mede FPS, uso de CPU e memória diretamente no dispositivo — essencial para identificar gargalos reais antes de otimizar às cegas.\n\n### Checklist rápido\n\n- [ ] `memo` nos componentes de lista\n- [ ] `FlashList` para listas com mais de 50 itens\n- [ ] `expo-image` para todas as imagens\n- [ ] New Architecture habilitada\n- [ ] Hermes engine ativo (padrão no Expo SDK 48+)\n- [ ] Bundle analisado com `npx expo export --dump-sourcemap`\n",
+      "html": "<h2>Por que performance mobile é diferente</h2>\n<p>Dispositivos móveis têm CPU, memória e bateria limitados. Um app lento não é só uma má experiência — ele é desinstalado. Otimizar React Native exige entender onde os gargalos realmente estão.</p>\n<h3>1. Evite re-renders desnecessários</h3>\n<p>O principal vilão de performance em React é renderizar componentes sem necessidade.</p>\n<pre><code class=\"language-tsx\">// Ruim: cria nova referência a cada render\n&#x3C;FlatList renderItem={({ item }) => &#x3C;Card item={item} />} />\n\n// Bom: componente estável com memo\nconst CardItem = memo(({ item }: { item: Item }) => &#x3C;Card item={item} />);\n&#x3C;FlatList renderItem={({ item }) => &#x3C;CardItem item={item} />} />\n</code></pre>\n<p>Use <code>useMemo</code> e <code>useCallback</code> apenas onde há custo real de computação — não indiscriminadamente.</p>\n<h3>2. Listas com FlatList e FlashList</h3>\n<p>Para listas longas, prefira <strong>FlashList</strong> (Shopify) ao <code>FlatList</code> nativo — ela recicla células de forma mais eficiente e reduz o tempo de primeiro render em até 10x.</p>\n<pre><code class=\"language-bash\">npx expo install @shopify/flash-list\n</code></pre>\n<h3>3. Imagens otimizadas</h3>\n<ul>\n<li>Use <code>expo-image</code> no lugar de <code>&#x3C;Image /></code> do React Native: suporta cache agressivo, blurhash e formatos modernos (WebP, AVIF)</li>\n<li>Sempre defina <code>width</code> e <code>height</code> explícitos para evitar layout shift</li>\n</ul>\n<h3>4. New Architecture (JSI + Fabric)</h3>\n<p>O Expo SDK 50+ habilita a <strong>New Architecture</strong> por padrão. Com ela, a comunicação JS↔Native deixa de passar pela bridge assíncrona e passa a usar JSI (JavaScript Interface), eliminando serialização e reduzindo latência em operações intensivas.</p>\n<p>Ative no <code>app.json</code>:</p>\n<pre><code class=\"language-json\">{\n  \"expo\": {\n    \"newArchEnabled\": true\n  }\n}\n</code></pre>\n<h3>5. Profiling com Flashlight</h3>\n<p>O <strong>Flashlight</strong> (anteriormente PerfDog open-source) mede FPS, uso de CPU e memória diretamente no dispositivo — essencial para identificar gargalos reais antes de otimizar às cegas.</p>\n<h3>Checklist rápido</h3>\n<ul>\n<li>[ ] <code>memo</code> nos componentes de lista</li>\n<li>[ ] <code>FlashList</code> para listas com mais de 50 itens</li>\n<li>[ ] <code>expo-image</code> para todas as imagens</li>\n<li>[ ] New Architecture habilitada</li>\n<li>[ ] Hermes engine ativo (padrão no Expo SDK 48+)</li>\n<li>[ ] Bundle analisado com <code>npx expo export --dump-sourcemap</code></li>\n</ul>"
+    },
+    "_id": "performance-expo-react-native.md",
+    "_raw": {
+      "sourceFilePath": "performance-expo-react-native.md",
+      "sourceFileName": "performance-expo-react-native.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "performance-expo-react-native"
+    },
+    "type": "Post",
+    "slug": "performance-expo-react-native",
+    "url": "/posts/performance-expo-react-native"
+  },
+  {
+    "title": "Server Actions e o Fim da Separação entre Front e Back-end?",
+    "date": "2026-05-02T00:00:00.000Z",
+    "description": "Server Actions do Next.js borram a fronteira entre front-end e back-end. Entenda o que muda, os benefícios reais e os cuidados de segurança necessários.",
+    "tags": [
+      "nextjs",
+      "server actions",
+      "full-stack",
+      "react",
+      "typescript"
+    ],
+    "body": {
+      "raw": "\n## O que são Server Actions?\n\nIntroduzidas no Next.js 14 e estabilizadas no React 19, **Server Actions** são funções assíncronas que rodam exclusivamente no servidor, mas que podem ser chamadas diretamente de componentes React — sem precisar criar uma rota de API.\n\n```ts\n// app/actions.ts\n\"use server\";\n\nexport async function salvarContato(data: FormData) {\n  await db.contatos.create({ nome: data.get(\"nome\") as string });\n}\n```\n\n```tsx\n// app/contato/page.tsx\nimport { salvarContato } from \"../actions\";\n\nexport default function ContatoPage() {\n  return (\n    <form action={salvarContato}>\n      <input name=\"nome\" />\n      <button type=\"submit\">Salvar</button>\n    </form>\n  );\n}\n```\n\n### O que muda na prática\n\n- **Menos código**: sem `fetch`, sem `useEffect`, sem rota `/api/contato`\n- **Type-safety ponta a ponta**: o TypeScript valida a chamada sem geração de código extra\n- **Progressive Enhancement**: formulários funcionam mesmo sem JavaScript no cliente\n\n### Os cuidados que ninguém pode ignorar\n\nServer Actions são **endpoints HTTP reais** — qualquer um pode chamá-los diretamente. Isso exige:\n\n1. **Autenticação** em toda action que acessa dados sensíveis\n2. **Validação rigorosa** de input (use Zod ou Valibot)\n3. **Rate limiting** para evitar abuso\n\n### Fim da separação front/back?\n\nNão exatamente. A separação de **responsabilidades** continua existindo — o que muda é o local onde a fronteira é desenhada. Server Actions são ideais para mutações simples; APIs REST ou GraphQL ainda fazem sentido para contratos públicos e consumidores externos.\n\nA tendência é um modelo **híbrido**: Server Actions para a maioria dos casos internos, APIs explícitas apenas onde necessário.\n",
+      "html": "<h2>O que são Server Actions?</h2>\n<p>Introduzidas no Next.js 14 e estabilizadas no React 19, <strong>Server Actions</strong> são funções assíncronas que rodam exclusivamente no servidor, mas que podem ser chamadas diretamente de componentes React — sem precisar criar uma rota de API.</p>\n<pre><code class=\"language-ts\">// app/actions.ts\n\"use server\";\n\nexport async function salvarContato(data: FormData) {\n  await db.contatos.create({ nome: data.get(\"nome\") as string });\n}\n</code></pre>\n<pre><code class=\"language-tsx\">// app/contato/page.tsx\nimport { salvarContato } from \"../actions\";\n\nexport default function ContatoPage() {\n  return (\n    &#x3C;form action={salvarContato}>\n      &#x3C;input name=\"nome\" />\n      &#x3C;button type=\"submit\">Salvar&#x3C;/button>\n    &#x3C;/form>\n  );\n}\n</code></pre>\n<h3>O que muda na prática</h3>\n<ul>\n<li><strong>Menos código</strong>: sem <code>fetch</code>, sem <code>useEffect</code>, sem rota <code>/api/contato</code></li>\n<li><strong>Type-safety ponta a ponta</strong>: o TypeScript valida a chamada sem geração de código extra</li>\n<li><strong>Progressive Enhancement</strong>: formulários funcionam mesmo sem JavaScript no cliente</li>\n</ul>\n<h3>Os cuidados que ninguém pode ignorar</h3>\n<p>Server Actions são <strong>endpoints HTTP reais</strong> — qualquer um pode chamá-los diretamente. Isso exige:</p>\n<ol>\n<li><strong>Autenticação</strong> em toda action que acessa dados sensíveis</li>\n<li><strong>Validação rigorosa</strong> de input (use Zod ou Valibot)</li>\n<li><strong>Rate limiting</strong> para evitar abuso</li>\n</ol>\n<h3>Fim da separação front/back?</h3>\n<p>Não exatamente. A separação de <strong>responsabilidades</strong> continua existindo — o que muda é o local onde a fronteira é desenhada. Server Actions são ideais para mutações simples; APIs REST ou GraphQL ainda fazem sentido para contratos públicos e consumidores externos.</p>\n<p>A tendência é um modelo <strong>híbrido</strong>: Server Actions para a maioria dos casos internos, APIs explícitas apenas onde necessário.</p>"
+    },
+    "_id": "server-actions-front-back.md",
+    "_raw": {
+      "sourceFilePath": "server-actions-front-back.md",
+      "sourceFileName": "server-actions-front-back.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "server-actions-front-back"
+    },
+    "type": "Post",
+    "slug": "server-actions-front-back",
+    "url": "/posts/server-actions-front-back"
+  },
+  {
+    "title": "Por que o TypeScript se Tornou o Padrão Ouro em 2026",
+    "date": "2026-05-02T00:00:00.000Z",
+    "description": "TypeScript domina o ecossistema JavaScript em 2026. Veja os motivos técnicos e culturais que consolidaram sua adoção como padrão da indústria.",
+    "tags": [
+      "typescript",
+      "javascript",
+      "boas práticas",
+      "ecossistema",
+      "carreira"
+    ],
+    "body": {
+      "raw": "\n## De opcional a obrigatório\n\nHá alguns anos, TypeScript era \"aquela coisa que times grandes usavam\". Em 2026, é difícil encontrar um projeto JavaScript relevante — front, back ou mobile — que **não** use TypeScript por padrão.\n\n### Os motivos técnicos\n\n**1. Feedback imediato no editor**\nErros de tipo aparecem antes de rodar qualquer teste. Em bases de código grandes, isso economiza horas de debugging.\n\n**2. Refatoração com segurança**\nRenomear uma função ou alterar a assinatura de um método propaga automaticamente para todos os usos — o compilador aponta o que quebrou.\n\n**3. Integração nativa com o ecossistema**\nNext.js, NestJS, Prisma, tRPC e praticamente todos os frameworks modernos são construídos *em* TypeScript e oferecem inferência de tipos out-of-the-box.\n\n**4. LLMs geram código melhor com TypeScript**\nFerramentas de IA como GitHub Copilot e Claude produzem sugestões mais precisas quando há tipos explícitos — o contexto disponível é maior.\n\n### O motivo cultural\n\nO mercado de trabalho consolidou TypeScript como **requisito mínimo**. Times que usam JavaScript puro carregam o ônus de justificar a escolha, não o contrário.\n\n### Quando JavaScript ainda faz sentido\n\n- Scripts utilitários de vida curta (automações, one-offs)\n- Prototipação exploratória antes de comprometer uma estrutura\n- Ambientes onde o overhead de compilação é proibitivo\n\n### Conclusão\n\nTypeScript não venceu por imposição — venceu porque **o custo de não usá-lo** ficou alto demais. Tipos são documentação viva, e em um cenário de equipes distribuídas e IA gerando código, essa documentação vale ouro.\n",
+      "html": "<h2>De opcional a obrigatório</h2>\n<p>Há alguns anos, TypeScript era \"aquela coisa que times grandes usavam\". Em 2026, é difícil encontrar um projeto JavaScript relevante — front, back ou mobile — que <strong>não</strong> use TypeScript por padrão.</p>\n<h3>Os motivos técnicos</h3>\n<p><strong>1. Feedback imediato no editor</strong>\nErros de tipo aparecem antes de rodar qualquer teste. Em bases de código grandes, isso economiza horas de debugging.</p>\n<p><strong>2. Refatoração com segurança</strong>\nRenomear uma função ou alterar a assinatura de um método propaga automaticamente para todos os usos — o compilador aponta o que quebrou.</p>\n<p><strong>3. Integração nativa com o ecossistema</strong>\nNext.js, NestJS, Prisma, tRPC e praticamente todos os frameworks modernos são construídos <em>em</em> TypeScript e oferecem inferência de tipos out-of-the-box.</p>\n<p><strong>4. LLMs geram código melhor com TypeScript</strong>\nFerramentas de IA como GitHub Copilot e Claude produzem sugestões mais precisas quando há tipos explícitos — o contexto disponível é maior.</p>\n<h3>O motivo cultural</h3>\n<p>O mercado de trabalho consolidou TypeScript como <strong>requisito mínimo</strong>. Times que usam JavaScript puro carregam o ônus de justificar a escolha, não o contrário.</p>\n<h3>Quando JavaScript ainda faz sentido</h3>\n<ul>\n<li>Scripts utilitários de vida curta (automações, one-offs)</li>\n<li>Prototipação exploratória antes de comprometer uma estrutura</li>\n<li>Ambientes onde o overhead de compilação é proibitivo</li>\n</ul>\n<h3>Conclusão</h3>\n<p>TypeScript não venceu por imposição — venceu porque <strong>o custo de não usá-lo</strong> ficou alto demais. Tipos são documentação viva, e em um cenário de equipes distribuídas e IA gerando código, essa documentação vale ouro.</p>"
+    },
+    "_id": "typescript-padrao-ouro-2026.md",
+    "_raw": {
+      "sourceFilePath": "typescript-padrao-ouro-2026.md",
+      "sourceFileName": "typescript-padrao-ouro-2026.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "typescript-padrao-ouro-2026"
+    },
+    "type": "Post",
+    "slug": "typescript-padrao-ouro-2026",
+    "url": "/posts/typescript-padrao-ouro-2026"
   }
 ]

@@ -9,7 +9,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: { template: '%s | Meu Blog', default: 'Meu Blog' },
+  title: { template: '%s | Dev Fanio', default: 'DevFanio' },
   description: 'Blog sobre tecnologia e desenvolvimento de software.',
   openGraph: { type: 'website' },
 }

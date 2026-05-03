@@ -1,0 +1,26 @@
+{
+  "title": "O Surgimento dos Engenheiros de Software AI-First",
+  "date": "2026-05-02T00:00:00.000Z",
+  "description": "Como a geração de engenheiros AI-First está redefinindo o desenvolvimento de software, usando IA como ferramenta central no ciclo de criação.",
+  "tags": [
+    "inteligência artificial",
+    "carreira",
+    "engenharia de software",
+    "llm"
+  ],
+  "body": {
+    "raw": "\n## O que é um engenheiro AI-First?\n\nA expressão *AI-First* não significa apenas usar ferramentas de IA — significa **projetar o fluxo de trabalho em torno delas**. Esses engenheiros delegam tarefas repetitivas para modelos de linguagem (LLMs), revisam o output criticamente e focam energia em decisões que exigem julgamento humano.\n\n### Como esse perfil se diferencia\n\n| Engenheiro tradicional | Engenheiro AI-First |\n|---|---|\n| Escreve boilerplate manualmente | Gera e revisa boilerplate com IA |\n| Busca no Stack Overflow | Conversa com o modelo + valida na docs |\n| Foca em sintaxe | Foca em arquitetura e trade-offs |\n\n### Habilidades que passam a importar mais\n\n- **Prompt engineering** estruturado para obter código de qualidade\n- **Pensamento crítico** para identificar alucinações e erros sutis\n- **Conhecimento de sistemas** para orquestrar agentes e pipelines de IA\n- **Comunicação clara** — bons engenheiros AI-First escrevem specs detalhadas\n\n### O risco do excesso de confiança\n\nFerramentas como GitHub Copilot e Claude Code aceleram muito, mas código gerado sem revisão acumula dívida técnica rapidamente. O diferencial do profissional AI-First está justamente em **saber quando confiar e quando questionar** o output.\n\n### Conclusão\n\nA mudança não é sobre substituição, mas sobre **alavancagem**. Quem aprender a colaborar com IA de forma crítica e estruturada entregará muito mais — e com mais qualidade — do que quem ignorar essas ferramentas.\n",
+    "html": "<h2>O que é um engenheiro AI-First?</h2>\n<p>A expressão <em>AI-First</em> não significa apenas usar ferramentas de IA — significa <strong>projetar o fluxo de trabalho em torno delas</strong>. Esses engenheiros delegam tarefas repetitivas para modelos de linguagem (LLMs), revisam o output criticamente e focam energia em decisões que exigem julgamento humano.</p>\n<h3>Como esse perfil se diferencia</h3>\n<p>| Engenheiro tradicional | Engenheiro AI-First |\n|---|---|\n| Escreve boilerplate manualmente | Gera e revisa boilerplate com IA |\n| Busca no Stack Overflow | Conversa com o modelo + valida na docs |\n| Foca em sintaxe | Foca em arquitetura e trade-offs |</p>\n<h3>Habilidades que passam a importar mais</h3>\n<ul>\n<li><strong>Prompt engineering</strong> estruturado para obter código de qualidade</li>\n<li><strong>Pensamento crítico</strong> para identificar alucinações e erros sutis</li>\n<li><strong>Conhecimento de sistemas</strong> para orquestrar agentes e pipelines de IA</li>\n<li><strong>Comunicação clara</strong> — bons engenheiros AI-First escrevem specs detalhadas</li>\n</ul>\n<h3>O risco do excesso de confiança</h3>\n<p>Ferramentas como GitHub Copilot e Claude Code aceleram muito, mas código gerado sem revisão acumula dívida técnica rapidamente. O diferencial do profissional AI-First está justamente em <strong>saber quando confiar e quando questionar</strong> o output.</p>\n<h3>Conclusão</h3>\n<p>A mudança não é sobre substituição, mas sobre <strong>alavancagem</strong>. Quem aprender a colaborar com IA de forma crítica e estruturada entregará muito mais — e com mais qualidade — do que quem ignorar essas ferramentas.</p>"
+  },
+  "_id": "engenheiros-ai-first.md",
+  "_raw": {
+    "sourceFilePath": "engenheiros-ai-first.md",
+    "sourceFileName": "engenheiros-ai-first.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "engenheiros-ai-first"
+  },
+  "type": "Post",
+  "slug": "engenheiros-ai-first",
+  "url": "/posts/engenheiros-ai-first"
+}

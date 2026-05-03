@@ -1,0 +1,27 @@
+{
+  "title": "Server Actions e o Fim da Separação entre Front e Back-end?",
+  "date": "2026-05-02T00:00:00.000Z",
+  "description": "Server Actions do Next.js borram a fronteira entre front-end e back-end. Entenda o que muda, os benefícios reais e os cuidados de segurança necessários.",
+  "tags": [
+    "nextjs",
+    "server actions",
+    "full-stack",
+    "react",
+    "typescript"
+  ],
+  "body": {
+    "raw": "\n## O que são Server Actions?\n\nIntroduzidas no Next.js 14 e estabilizadas no React 19, **Server Actions** são funções assíncronas que rodam exclusivamente no servidor, mas que podem ser chamadas diretamente de componentes React — sem precisar criar uma rota de API.\n\n```ts\n// app/actions.ts\n\"use server\";\n\nexport async function salvarContato(data: FormData) {\n  await db.contatos.create({ nome: data.get(\"nome\") as string });\n}\n```\n\n```tsx\n// app/contato/page.tsx\nimport { salvarContato } from \"../actions\";\n\nexport default function ContatoPage() {\n  return (\n    <form action={salvarContato}>\n      <input name=\"nome\" />\n      <button type=\"submit\">Salvar</button>\n    </form>\n  );\n}\n```\n\n### O que muda na prática\n\n- **Menos código**: sem `fetch`, sem `useEffect`, sem rota `/api/contato`\n- **Type-safety ponta a ponta**: o TypeScript valida a chamada sem geração de código extra\n- **Progressive Enhancement**: formulários funcionam mesmo sem JavaScript no cliente\n\n### Os cuidados que ninguém pode ignorar\n\nServer Actions são **endpoints HTTP reais** — qualquer um pode chamá-los diretamente. Isso exige:\n\n1. **Autenticação** em toda action que acessa dados sensíveis\n2. **Validação rigorosa** de input (use Zod ou Valibot)\n3. **Rate limiting** para evitar abuso\n\n### Fim da separação front/back?\n\nNão exatamente. A separação de **responsabilidades** continua existindo — o que muda é o local onde a fronteira é desenhada. Server Actions são ideais para mutações simples; APIs REST ou GraphQL ainda fazem sentido para contratos públicos e consumidores externos.\n\nA tendência é um modelo **híbrido**: Server Actions para a maioria dos casos internos, APIs explícitas apenas onde necessário.\n",
+    "html": "<h2>O que são Server Actions?</h2>\n<p>Introduzidas no Next.js 14 e estabilizadas no React 19, <strong>Server Actions</strong> são funções assíncronas que rodam exclusivamente no servidor, mas que podem ser chamadas diretamente de componentes React — sem precisar criar uma rota de API.</p>\n<pre><code class=\"language-ts\">// app/actions.ts\n\"use server\";\n\nexport async function salvarContato(data: FormData) {\n  await db.contatos.create({ nome: data.get(\"nome\") as string });\n}\n</code></pre>\n<pre><code class=\"language-tsx\">// app/contato/page.tsx\nimport { salvarContato } from \"../actions\";\n\nexport default function ContatoPage() {\n  return (\n    &#x3C;form action={salvarContato}>\n      &#x3C;input name=\"nome\" />\n      &#x3C;button type=\"submit\">Salvar&#x3C;/button>\n    &#x3C;/form>\n  );\n}\n</code></pre>\n<h3>O que muda na prática</h3>\n<ul>\n<li><strong>Menos código</strong>: sem <code>fetch</code>, sem <code>useEffect</code>, sem rota <code>/api/contato</code></li>\n<li><strong>Type-safety ponta a ponta</strong>: o TypeScript valida a chamada sem geração de código extra</li>\n<li><strong>Progressive Enhancement</strong>: formulários funcionam mesmo sem JavaScript no cliente</li>\n</ul>\n<h3>Os cuidados que ninguém pode ignorar</h3>\n<p>Server Actions são <strong>endpoints HTTP reais</strong> — qualquer um pode chamá-los diretamente. Isso exige:</p>\n<ol>\n<li><strong>Autenticação</strong> em toda action que acessa dados sensíveis</li>\n<li><strong>Validação rigorosa</strong> de input (use Zod ou Valibot)</li>\n<li><strong>Rate limiting</strong> para evitar abuso</li>\n</ol>\n<h3>Fim da separação front/back?</h3>\n<p>Não exatamente. A separação de <strong>responsabilidades</strong> continua existindo — o que muda é o local onde a fronteira é desenhada. Server Actions são ideais para mutações simples; APIs REST ou GraphQL ainda fazem sentido para contratos públicos e consumidores externos.</p>\n<p>A tendência é um modelo <strong>híbrido</strong>: Server Actions para a maioria dos casos internos, APIs explícitas apenas onde necessário.</p>"
+  },
+  "_id": "server-actions-front-back.md",
+  "_raw": {
+    "sourceFilePath": "server-actions-front-back.md",
+    "sourceFileName": "server-actions-front-back.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "server-actions-front-back"
+  },
+  "type": "Post",
+  "slug": "server-actions-front-back",
+  "url": "/posts/server-actions-front-back"
+}
