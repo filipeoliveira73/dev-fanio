@@ -55,6 +55,9 @@ export default function Header() {
       </Link>
       <Nav>
         <Link href="/">Posts</Link>
+        <Link href="/sobre">Sobre</Link>
+        <Link href="/contato">Contato</Link>
+        <Link href="/privacidade">Privacidade</Link>
       </Nav>
     </HeaderWrapper>
   );
